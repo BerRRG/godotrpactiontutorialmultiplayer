@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://d03rhrrjjm0vf"]
+
+[ext_resource type="Script" path="res://menuController.gd" id="1_yusfd"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yusfd")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+offset_left = 125.0
+offset_top = 48.0
+offset_right = 221.0
+offset_bottom = 114.0
+
+[node name="startGame" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="join" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Join"
+
+[node name="Name" type="LineEdit" parent="GridContainer"]
+layout_mode = 2
+text = "teste"
+placeholder_text = "nome"
+
+[connection signal="pressed" from="GridContainer/startGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="GridContainer/join" to="." method="_on_join_pressed"]

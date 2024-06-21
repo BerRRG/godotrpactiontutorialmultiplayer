@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://gew67yktmbr5"]
+
+[ext_resource type="PackedScene" uid="uid://bh14oa5j8a0l8" path="res://Stats.tscn" id="1"]
+
+[node name="PlayerStats" instance=ExtResource("1")]
